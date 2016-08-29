@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- 
+用了淘宝的flexible库，这个meta由库自动生成
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> 
+-->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<title>modelX demo</title>
+<script src="../lib/jquery.js"></script>
+
+
+
+<!--淘宝flexible库-->
+<script src="../lib/flexible.js"></script>
+
+<!--模块像素转换库-->
+<script src="../lib/model-x.js"></script>
+
+
+
+<!-- 测试代码 -->
+<!--
+模块像素样式线下预编译(线下辅助)
+如果不用gulp开发，可用此js进行辅助
+*需搭本地服务器，不然会因为跨域报错，除非仅使用style标签做样式
+*异步处理会有闪烁，仅测试使用
+-->
+<script src="../lib/model-x-style-build.js"></script>
+
+
+
+
+<!--内联样式(测试)-->
+<style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,figure {padding:0;margin:0;}
+fieldset,img{border:0;}
+ol,ul,li {list-style:none;}
+table {border-collapse:collapse;border-spacing:0;}
+body {font-size:16px;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+#wrap{width:100%;max-width:640mx;margin:0 auto;padding-bottom:30px;}
+p{overflow:hidden;font-size:48mx;line-height:1.5;color:#fff;background:#ccc;}
+.p1{width:6.4rem;height:90mx;background:#ababe6;}
+</style>
+
+<style type="text/css">
+@model-base 750;
+.p2{width:7.5rem;height:90mx;background:#e6d0ab;}
+
+@model-base 640;
+.p3{width:6.4rem;height:100mx;background:#e6abc2;}
+</style>
+
+<!--外链样式(测试)-->
+<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+</head>
+
+<body>
+
+<div id="wrap">
+	<p class="p1">640 x 90</p>
+	<p class="p2">750 x 90</p>
+	<p class="p3">750 x 100</p>
+	<p class="p4">640 x 201 (带底图)</p>
+</div>
+
+</body>
+</html>
